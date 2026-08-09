@@ -1,0 +1,4 @@
+*.csv
+job_postings.db
+secrets.toml
+.streamlit/secrets.toml
