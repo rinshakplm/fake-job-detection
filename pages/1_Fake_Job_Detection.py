@@ -91,7 +91,7 @@ if st.button("Check Job Posting"):
                         st.divider()
                         st.write("**AI Summary:**")
                         with st.spinner("Generating explanation..."):
-                            groq_client = Groq(api_key=st.secrets["GROQ_API_KEY"]) 
+                            groq_client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
                             words_list = [word for word, impact in top_fake_words]
                             words_str = ", ".join(words_list)
@@ -102,7 +102,11 @@ The following suspicious words/phrases were found: {words_str}.
 Write a brief, clear, 2-3 sentence explanation for a non-technical job seeker about why this posting might be risky. Be direct and practical."""
 
                             llm_response = groq_client.chat.completions.create(
-                                model="llama-3.1-8b-instant",
+                                model="openai/gpt-oss-120b",
                                 messages=[{"role": "user", "content": prompt}]
                             )
-                            st.write(llm_response.choices[0].message.content)
+                            st.write(llm_response.choices[0].message.content)    
+
+    
+
+  
