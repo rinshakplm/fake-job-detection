@@ -24,7 +24,7 @@ job postings.
 - Machine Learning: Logistic Regression, Random Forest, Voting Classifier (ensemble)
 - SQL: SQLite for data insights
 - Explainable AI: SHAP
-- Genrative AI: Groq API (Llama 3.1) for natural language explanations
+- Generative AI: Groq API (GPT-OSS 120B) for natural-language explanations
 - Web App: Streamlit
 
 
